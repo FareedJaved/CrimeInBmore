@@ -8,8 +8,8 @@ $(function() {
 		labels: ["White","African Americans"], 
 		datasets: [
 			{
-				label:"",
-	            backgroundColor: "plum",
+			    label:"",
+		    backgroundColor: "plum",
 	            fillColor: "BlueViolet",
 	            borderColor: "rgba(153,0,76,1)",
 	            borderWidth: 1,
