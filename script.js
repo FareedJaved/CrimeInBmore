@@ -5,9 +5,26 @@ $(function() {
 
 	// 2013 data 
 	var data13 = [ 
-		{value: 11976, color: "#CB4B16"}, 
-		{value: 2349, color: "#FFA500"}
+		{value: 11976, color: "Purple"}, 
+		{value: 2349, color: "#cc6600"}
 	]
+
+	// How I want the chart to behave while being loaded on page
+	var doughnutOptions = {
+  		segmentStrokeColor: "white",
+  		segmentStrokeWidth: 3,
+  		percentageInnerCutout: 50,
+  		animation : true, 
+  		animationSteps: 100, 
+  		animationEasing: "easingOutQuart",
+  		animateRotate: true, 
+  		animateScale:true
+  	};
+
+  	var ctx = document.getElementById("doughnutChart").getContext("2d");
+	var myDoughnutChart13 = new Chart(ctx).Doughnut(data13,doughnutOptions);
+
+// =================================================================
 
 	// 2014 data
 	var data14 = {
@@ -47,8 +64,6 @@ $(function() {
 	var option = {};
 
 	/* All three chart instantiations */
-	var ctx = document.getElementById("doughnutChart").getContext("2d");
-	myDoughnutChart13 = new Chart(ctx).Doughnut(data13,option);
 
 	var ctx2 = document.getElementById("2014BarChart").getContext("2d");
 	var barChart14 = new Chart(ctx2).Bar(data14,option);
