@@ -28,8 +28,8 @@ $(function() {
 
 	// 2014 data
 	var data14 = [
-		{value: 11976, color: "Purple"}, 
-		{value: 2349, color: "#ffb31a"}
+		{value: 24107, color: "Purple"}, 
+		{value: 4950, color: "#ffb31a"}
 	];
 
 	var ctx2 = document.getElementById("2014BarChart").getContext("2d");

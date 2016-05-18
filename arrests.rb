@@ -12,7 +12,7 @@ File.foreach("BPD_Arrests.csv") { |line|
 	ttl = ttl + 1 # ttl number of arrests
 	s = line.split(",") 
 	year = s[4].split("/")
-	if s[7] == "Unknown Offense" && year[2] == "2014"  
+	if s[7] == "Unknown Offense" && year[2] == "2015"  
 		unknown = unknown + 1
 		# Which arrests were African Americans		
 		if s[3] == "B" then 
@@ -29,7 +29,7 @@ File.foreach("BPD_Arrests.csv") { |line|
 	end
 }
 
-puts "Just from looking at Arrest data from the Baltimore Police Dept. in 2014..."
+puts "Just from looking at Arrest data from the Baltimore Police Dept. in 2015..."
 puts
 
 print "The number of arrests that were categorized as an Unknown Offense is: "
@@ -38,7 +38,7 @@ puts unknown
 print "Unknown Offenses make up "
 a = (unknown.to_f / ttl.to_f) * 100 
 printf("%2d", a )
-print " percent of total arrests that the BPD made in 2014"
+print " percent of total arrests that the BPD made in 2015"
 puts
 puts
 
